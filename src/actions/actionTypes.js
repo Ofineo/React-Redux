@@ -1,0 +1,1 @@
+export const CREATE_COURSES = 'CREATE_COURSES';
