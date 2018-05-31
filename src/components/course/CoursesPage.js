@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { connect } from "react-redux";
 import * as courseActions from '../../actions/courseActions';
 import { bindActionCreators } from "redux";
-import CourseList from './courseList';
+import CourseList from './CourseList';
 
 class CoursesPage extends React.Component {
   constructor(props, context) {
