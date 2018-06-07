@@ -24,7 +24,7 @@ export function loadCourses(){
 }
 
 export function saveCourse(course){
-    return function(dispatch, getState){
+    return function(dispatch, getState){ //optional parameter to get out of the store pieces of state that you need to update your thunk
         dispatch(beginAjaxCall());
         return courseApi.saveCourse(course).then(savedCourse=>{
             course.id ? dispatch(updateCourseSuccess(savedCourse)) :
