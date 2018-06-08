@@ -3,9 +3,9 @@ import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import CourseForm from './CourseForm';
 
-function setup() {
+function setup(saving) {
     let props = {
-        course: {}, saving: false, errors: {},
+        course: {}, saving: saving, errors: {},
         onSave: () => { },
         onChange: () => { }
     };
@@ -28,4 +28,13 @@ describe ('CourseForm via rEact Test Utils', ()=>{
         let [h1] = output.props.children;
         expect(h1.type).toBe('h1');
     });
+    it('Save button is labelled "Save" when not saving',()=>{
+        const {output} = setup(false);
+        const submitButton = output.props.children[5];
+        expect(submitButton.props.value).toBe('Save');
+
+    });
+
+
+
 });
