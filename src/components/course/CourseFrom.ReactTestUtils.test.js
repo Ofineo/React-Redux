@@ -21,7 +21,7 @@ function setup(saving) {
     };
 }
 
-describe ('CourseForm via rEact Test Utils', ()=>{
+describe ('CourseForm via React Test Utils', ()=>{
     it('renders for and h1', ()=>{
         const {output} = setup();
         expect(output.type).toBe('form');
