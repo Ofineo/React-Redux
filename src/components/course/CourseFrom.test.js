@@ -32,9 +32,12 @@ describe ('CourseForm via rEact Test Utils', ()=>{
         const {output} = setup(false);
         const submitButton = output.props.children[5];
         expect(submitButton.props.value).toBe('Save');
-
     });
-
+    it('Save button is labelled "Saving..." when saving',()=>{
+        const {output} = setup(true);
+        const submitButton = output.props.children[5];
+        expect(submitButton.props.value).toBe('Saving...');
+    });
 
 
 });
